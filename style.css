@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inter:wght@100..900&family=Outfit:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+*{
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+/*used colors*/
+:root{
+    --main-back:hsl(216, 50%, 16%);
+    --line-color:hsl(215, 32%, 27%);
+    --shadow-color:hsl(217, 54%, 11%);
+    --card1:hsl(215, 48%, 12%);
+    --background:#121e30;
+    --text-color:hsl(215, 49%, 71%);
+}
+body{
+    max-width: 1440px;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--background);
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/*like a shadow*/
+.container{
+    margin: 3% auto;
+    margin-bottom: 1%;
+    position: relative;
+    width: 420px;
+    height: 630px;
+    background-color: var(--card1);
+    border-radius: 2em;
+    -webkit-border-radius: 2em;
+    -moz-border-radius: 2em;
+    -ms-border-radius: 2em;
+    -o-border-radius: 2em;
+}
+/*box(card)*/
+.box{
+    position: absolute;
+    background-color: var(--main-back);
+    width: 340px;
+    border-radius: 1em;
+    padding: 20px;
+    top: 30px;
+    left: 40px;
+    box-shadow:0 20px 2px 15px var(--shadow-color);
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -ms-border-radius: 1em;
+    -o-border-radius: 1em;
+}
+/*image in box*/
+.box .main{
+    cursor: pointer;
+    border-radius: 0.6em;
+    width: 300px;
+    -webkit-border-radius: 0.6em;
+    -moz-border-radius: 0.6em;
+    -ms-border-radius: 0.6em;
+    -o-border-radius: 0.6em;
+}
+/*eye icon (unvisible)*/
+.eye-icon{
+    position: absolute;
+    top: 20px;
+    cursor: pointer;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(178, 100%, 50%);
+    width: 300px;
+    height: 300px;
+    transition: 0.8s ease;
+    border-radius: 1.2em;
+    -webkit-border-radius: 1.2em;
+    -moz-border-radius: 1.2em;
+    -ms-border-radius: 1.2em;
+    -o-border-radius: 1.2em;
+    -webkit-transition: 0.8s ease;
+    -moz-transition: 0.8s ease;
+    -ms-transition: 0.8s ease;
+    -o-transition: 0.8s ease;
+}
+/*hover for making icon visible*/
+.box .main:hover + .eye-icon{
+    display: flex;
+}
+/*text area*/
+.text h3{
+    cursor: pointer;
+    color: hsl(0, 0%, 100%);
+    margin: 5% auto;
+}
+.text h3:hover{
+    color:hsl(178, 100%, 50%) ;
+}
+.text p{
+    color: var(--text-color);
+}
+.spans{
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    color: var(--text-color);
+    border-bottom: 2px solid var(--line-color);
+}
+.img1{
+    width: 9px;
+    margin-bottom: -1px;
+}
+.img2{
+    width: 15px;
+    margin-bottom: -1px;
+}
+.cyan{
+    color: hsl(178, 100%, 50%);
+}
+
+.profile{
+    padding: 15px 0;
+    display: flex;
+    color: white;
+}
+.profile img{
+    width:35px;
+    margin-right: 10px;
+    border: 1px solid white;
+    border-radius: 50px;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    -ms-border-radius: 50px;
+    -o-border-radius: 50px;
+}
+.profile span{
+    padding: 8px 2px;
+}
+.blur-span{
+    color: var(--text-color);
+}
+/*responsive design*/
+@media screen and (max-width: 500px){
+    body{
+        max-width: 500px;
+    }
+    .container{
+        width: 375px;
+    }
+    .box{
+        width: 295px;
+    }
+    .box .main{
+        width: 255px;
+    }
+    .eye-icon{
+        width: 255px;
+        height: 255px;
+    }
+
+
+}
+    
+
